@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: quality-check
+        name: Repository quality checks
+        entry: bash -c './scripts/quality-check.sh'
+        language: system
+        pass_filenames: false
+        files: '\.(rs|toml|lock)$|^scripts/quality-check'
